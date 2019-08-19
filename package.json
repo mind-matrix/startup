@@ -1,0 +1,30 @@
+{
+  "name": "startup",
+  "title": "Startup",
+  "version": "0.0.1",
+  "description": "A startup project for in-house services",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "startup",
+    "webapp"
+  ],
+  "author": "Sagnik Modak",
+  "license": "MIT",
+  "dependencies": {
+    "collections": "^5.1.9",
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "fomantic-ui": "^2.7.7",
+    "multer": "^1.4.2",
+    "uniqid": "^5.0.3",
+    "ws": "^7.1.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0",
+    "request": "^2.88.0"
+  }
+}

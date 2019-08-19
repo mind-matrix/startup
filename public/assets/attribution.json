@@ -1,0 +1,14 @@
+{
+    "icon": {
+        "wrench" : { "link": "https://www.flaticon.com/authors/gregor-cresnar", "title": "Gregor Cresnar" },
+        "screwdriver": { "link": "https://www.flaticon.com/authors/freepik", "title": "Freepik" },
+        "plier": { "link": "https://www.flaticon.com/authors/freepik", "title": "Freepik" },
+        "chisel": { "link": "https://www.flaticon.com/authors/freepik", "title": "Freepik" },
+        "washing-machine": { "link": "https://www.flaticon.com/authors/dot-on-paper", "title": "Dot on Paper" },
+        "drill": { "link": "https://www.flaticon.com/authors/freepik", "title": "Freepik" },
+        "pencil-ruler": { "link": "https://www.flaticon.com/authors/freepik", "title": "Freepik" },
+        "paintbrush": { "link": "https://www.flaticon.com/authors/freepik", "title": "Freepik" },
+        "catering": { "link": "https://www.flaticon.com/authors/freepik", "title": "Freepik" },
+        "worker": { "link": "https://www.flaticon.com/authors/vectors-market", "title":"Vectors Market" }
+    }
+}

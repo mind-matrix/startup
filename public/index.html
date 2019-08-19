@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Startup</title>
+    <link rel="stylesheet" href="./dependencies/semantic-static/semantic.min.css">
+    <link rel="stylesheet" href="./css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Averia+Libre&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+            <div class="ui top fixed menu">
+                <h1 @click="OpenSidebar" class="ui header title">
+                    {{app.title}}
+                </h1>
+                <div class="ui right borderless menu">
+                    <div class="ui buttons">
+                        <button class="ui blue basic animated button" href="#">
+                            <div class="visible content">Register</div>
+                            <div class="hidden content">
+                                <i class="folder open icon"></i>
+                            </div>
+                        </button>
+                        <div class="or"></div>
+                        <button class="ui green basic animated button" href="#">
+                            <div class="visible content">Login In</div>
+                            <div class="hidden content">
+                                <i class="sign-in alternate icon"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        <div class="ui segment pushable">
+            <div ref="sidebar" class="ui sidebar vertical left inverted menu" style="margin-top: 30px !important;">
+                <a v-for="page in navigation.pages" href="page.link" class="item">
+                    <i v-bind:class="page.icon"></i>
+                    {{page.title}}
+                </a>
+            </div>
+            <div class="pusher">
+                <div class="ui bottom basic segment" style="padding: 0;">
+                    <div class="banner">
+                        <img class="ui image backdrop fluid" src="./assets/images/architect.jpg">
+                        <div class="title-text">
+                            <h1 class="ui center aligned inverted huge header">
+                                {{app.title}}
+                            </h1>
+                            <h3 class="ui center aligned inverted tiny header">
+                                {{app.description}}
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="ui basic segment">
+                        <div class="ui stackable two column grid">
+                            <div class="row">
+                                <div class="eight wide column">
+                                    <div class="ui center aligned container">
+                                        <div class="ui square shape feature-cards">
+                                            <div class="sides">
+                                                <div class="active side">
+                                                    <div class="ui card">
+                                                        <div class="image">
+                                                            <img src="./assets/icons/worker.svg">
+                                                        </div>
+                                                        <div class="content">
+                                                            <div class="center aligned header">
+                                                                Professional Support
+                                                            </div>
+                                                            <div class="center aligned description">
+                                                                We employ only professionals at your service
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="side">
+                                                    <div class="ui card">
+                                                        <div class="image">
+                                                            <img src="./assets/icons/satisfied.svg">
+                                                        </div>
+                                                        <div class="content">
+                                                            <div class="center aligned header">
+                                                                Recommended Services
+                                                            </div>
+                                                            <div class="center aligned description">
+                                                                Our services are reviewed recommended by many organizations and individuals who have availed them.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="side">
+                                                    <div class="ui card">
+                                                        <div class="image">
+                                                            <img src="./assets/icons/like.svg">
+                                                        </div>
+                                                        <div class="content">
+                                                            <div class="center aligned header">
+                                                                Customer Satisfaction
+                                                            </div>
+                                                            <div class="center aligned description">
+                                                                Satisfaction of the customer is of utmost importance to us. We strive to provide quality services.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="eight wide column">
+                                    <div class="ui center aligned container">
+                                        <div class="ui square shape feature-cards">
+                                            <div class="sides">
+                                                <div class="active side">
+                                                    <div class="ui card">
+                                                        <div class="image">
+                                                            <img src="./assets/icons/customer-service.svg">
+                                                        </div>
+                                                        <div class="content">
+                                                            <div class="center aligned header">
+                                                                Helpdesk
+                                                            </div>
+                                                            <div class="center aligned description">
+                                                                Our helpdesk is always ready to answer your queries through live-chat, call or email.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="side">
+                                                    <div class="ui card">
+                                                        <div class="image">
+                                                            <img src="./assets/icons/quick.svg">
+                                                        </div>
+                                                        <div class="content">
+                                                            <div class="center aligned header">
+                                                                Fast Response
+                                                            </div>
+                                                            <div class="center aligned description">
+                                                                We provide quick response to your requests. Servicemen will be at your doorstep within a very short time.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="side">
+                                                    <div class="ui card">
+                                                        <div class="image">
+                                                            <img src="./assets/icons/debit-card.svg">
+                                                        </div>
+                                                        <div class="content">
+                                                            <div class="center aligned header">
+                                                                Payment Methods
+                                                            </div>
+                                                            <div class="center aligned description">
+                                                                No cash? No problem. We provide easy online payment methods with the most trusted online payment gateways.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui icon message">
+                            <i class="inbox icon"></i>
+                            <div class="content">
+                                <div class="header">
+                                Have you heard about our mailing list?
+                                </div>
+                                <p>Get news about new and updated services in your e-mail every day.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui inverted segment">
+                        <div class="ui center aligned huge header">
+                            Sitemap
+                        </div>
+                        <div class="ui four column stackable grid">
+                            <div class="row">
+                                <div class="four width column">
+                                    <div class="ui center aligned inverted header">
+                                        Pages
+                                    </div>
+                                    <div class="ui center aligned inverted content">
+                                        <div class="ui inverted relaxed divided list">
+                                            <a href="#" class="item">
+                                                <i class="address card icon"></i>
+                                                <div class="content">
+                                                    <div class="header">About</div>
+                                                    <div class="description">A little bit about ourselves</div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="item">
+                                                <i class="money icon"></i>
+                                                <div class="content">
+                                                    <div class="header">Pricing</div>
+                                                    <div class="description">Services charge sheet</div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="item">
+                                                <i class="file alternate icon"></i>
+                                                <div class="content">
+                                                    <div class="header">Legal</div>
+                                                    <div class="description">Privacy policy, Cookie Policy and other legal docs.</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="four width column">
+                                    <div class="ui center aligned inverted header">
+                                        Services
+                                    </div>
+                                    <div class="ui center aligned inverted content">
+                                        <div class="ui inverted relaxed divided list">
+                                            <a v-for="service in services" v-bind:href="service.link" class="item">
+                                                <i v-bind:class="service.icon"></i>
+                                                <div class="content">
+                                                    <div class="header">{{service.title}}</div>
+                                                    <div class="description">{{service.description}}</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="four width column">
+                                    <div class="ui center aligned inverted header">
+                                        Locations
+                                    </div>
+                                    <div class="ui center aligned inverted content">
+                                        <div class="ui inverted relaxed divided list">
+                                            <div class="item">
+                                                <div class="ui center aligned inverted header">
+                                                    Tripura
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="four width column">
+                                    <div class="ui center aligned inverted header">
+                                        Contact
+                                    </div>
+                                    <div class="content">
+                                        <div class="ui embed" data-url="https://maps.google.com/maps?q=agartala&t=k&z=13&ie=UTF8&iwloc=&output=embed"></div>
+                                        <p style="margin-top: 10px;">
+                                            <i class="mail icon"></i>
+                                            <b>Email: </b> <a v-bind:href="'mailto:' + help.mail">{{help.mail}}</a>
+                                        </p>
+                                        <p>
+                                            <i class="phone icon"></i>
+                                            <b>Phone: </b> <a v-bind:href="'tel:' + help.phone">{{help.phone}}</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./dependencies/jquery/jquery-3.4.1.min.js"></script>
+    <script src="./dependencies/semantic-static/semantic.min.js"></script>
+    <script src="./js/vue.min.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>
