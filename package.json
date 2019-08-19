@@ -16,6 +16,7 @@
   "dependencies": {
     "collections": "^5.1.9",
     "compression": "^1.7.4",
+    "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "fomantic-ui": "^2.7.7",
     "multer": "^1.4.2",
